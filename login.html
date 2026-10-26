@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <section class="login-form-container">
+        <form action="" class="flex flex-col" id="login-form">
+            <div class="flex flex-col">
+                <label for="username">نام کاربری</label>
+                <input type="text" name="username" id="username">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="password" class="flex justify-between items-center">
+                    <span>رمز عبور</span>
+                    <img src="./assets/icons/invisible.png" alt="نمایش رمز عبور" id="hide-password"
+                        style="cursor: pointer;">
+                </label>
+
+                <input type="password" name="password" id="password">
+            </div>
+
+            <button type="submit" id="login-form-button">
+                ورود
+            </button>
+            <a href="/index.html" class="return-home-login" style="color: #fff;">
+                <span>بازگشت به صفحه اصلی</span>
+            </a>
+        </form>
+    </section>
+    <script src="./scripts/login.js" type="module"></script>
+</body>
+
+</html>

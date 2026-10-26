@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>سبد خرید</title>
+</head>
+
+<body>
+  <section class="cart-container flex flex-col">
+
+    <!-- <a href="/login.html">ورود</a> -->
+    <!-- <p class="font-rokh font-size-2 font-weight-700">سبد خرید شما</p>
+    <p class="font-exo2 font-size-1">(username:ali)</p> -->
+
+    <div id="cart-items-container" class="flex flex-col">
+      <!-- <div class="cart-item flex justify-between items-center padding-1">
+        <img src="./assets/images/AIR-FORCE.png" alt="">
+        <p class="font-exo2">Air Force</p>
+        <p>7,500,000 تومان</p>
+        <button>حذف</button>
+      </div> -->
+    </div>
+
+    <!-- <p>مجموعا 4 کالا به ارزش 18 ملیون</p> -->
+  </section>
+  <script src="./scripts/cart.js"></script>
+  <script>
+   const deleteItem = (id) => {
+        if (confirm("ایا برای حذف اطمینان دارید؟")) {
+          const username = JSON.parse(
+            localStorage.getItem("logged-in")
+          )?.username;
+          let cart = JSON.parse(localStorage.getItem(username))?.cart;
+
+          cart = cart.filter((item) => item.id != id);
+
+          localStorage.setItem(
+            username,
+            JSON.stringify({ username: username, cart: cart })
+          );
+
+          alert("با موفقیت حذف شد");
+          location.reload();
+        }
+      };
+  </script>
+</body>
+
+</html>
+
+<a href=""></a>
